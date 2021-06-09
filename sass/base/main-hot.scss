@@ -1,0 +1,14 @@
+.main-hot {
+	@include productShow;
+	.product-show {
+		.product-category {
+			.product-details {
+				.main-sales__product-image {
+					.main-sales__product-image--tittle-container-1, .main-sales__product-image--tittle-container-2, .main-sales__product-image--tittle-container-3 {
+						border: none;
+					}	
+				}
+			}
+		}
+	}
+}
