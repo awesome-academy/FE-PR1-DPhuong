@@ -3,10 +3,33 @@
 	.product-show {
 		.product-category {
 			.product-details {
-				.main-sales__product-image {
-					.main-sales__product-image--tittle-container-1, .main-sales__product-image--tittle-container-2, .main-sales__product-image--tittle-container-3 {
-						border: none;
-					}	
+				&:first-child {
+					.main-sales__product-image {
+						.main-sales__product-image--tittle-container-1, .main-sales__product-image--tittle-container-2, .main-sales__product-image--tittle-container-3 {
+							border: none;
+						}
+					}
+				}
+				&:nth-child(2) {
+					.main-sales__product-image {
+						.main-sales__product-image--tittle-container-1, .main-sales__product-image--tittle-container-2, .main-sales__product-image--tittle-container-3 {
+							border: none;
+						}
+					}
+				}
+				&:nth-child(3) {
+					.main-sales__product-image {
+						.main-sales__product-image--tittle-container-1, .main-sales__product-image--tittle-container-2, .main-sales__product-image--tittle-container-3 {
+							border: none;
+						}
+					}
+				}
+				&:nth-child(4) {
+					.main-sales__product-image {
+						.main-sales__product-image--tittle-container-1, .main-sales__product-image--tittle-container-2, .main-sales__product-image--tittle-container-3 {
+							border: none;
+						}
+					}
 				}
 			}
 		}
