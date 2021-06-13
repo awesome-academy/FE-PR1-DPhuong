@@ -47,3 +47,8 @@ mixin contactItem(contactIcon, contactText)
 	p
 		i.fa(class=contactIcon)
 		span=contactText
+
+mixin productSocialItem(image, number)
+	p 
+		img(src!=image)
+		span=number
