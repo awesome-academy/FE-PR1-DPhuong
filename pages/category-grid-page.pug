@@ -1,0 +1,45 @@
+extend ../pages/layout
+block page
+	include ../pages/partials/header-info
+block unique content
+	+showNav('Trang chủ / ', 'Sản phẩm / ', 'Rượu vang đỏ')
+	div.category-image
+		img(src='assets/image/slide-3.jpg' alt='banner')
+	div.category-grid
+		div.category-grid__column-list
+			div.category-grid__column-list--product-list
+				+tittle('DANH MỤC SẢN PHẨM', 'assets/image/titleleft-dark.png')
+				h4 RƯỢU NGOẠI
+					ul.product-list-import
+						- const listItem1 =  ['Rượu Chivas(67)', 'Hàng độc-Rượu độc đáo (16)', 'Johnnie Walker (49)', 'Rượu Wiskey (88)', 'Rượu Remy Martin (14)', 'Rượu Gerlemmoraing (27)','Rượu Chivas (85)', 'Hàng độc-Rượu độc đáo (17)', 'Johnnie Walker (19)', 'Rượu Wiskey (22)', 'Rượu Remy Martin (35)', 'Rượu Gerlemmoraing (18)', 'Rượu Chivas(67)', 'Hàng độc-Rượu độc đáo (16)', 'Johnnie Walker (49)', 'Rượu Wiskey (88)', 'Rượu Remy Martin (14)', 'Rượu Gerlemmoraing (27)','Rượu Chivas (85)', 'Hàng độc-Rượu độc đáo (17)','Rượu Gerlemmoraing (27)','Rượu Chivas (85)']
+						each columnListItem1 in listItem1
+							li
+								a(href='#')=columnListItem1
+				h4 RƯỢU VANG
+					ul.product-list-grape
+						- const listItem2 = ['Rượu Wiskey (88)', 'Rượu Remy Martin (14)', 'Rượu Gerlemmoraing (27)','Rượu Chivas (85)', 'Hàng độc-Rượu độc đáo (17)', 'Johnnie Walker (19)', 'Rượu Wiskey (22)', 'Rượu Remy Martin (35)', 'Rượu Gerlemmoraing (18)', 'Rượu Chivas(67)', 'Hàng độc-Rượu độc đáo (16)']
+						each columnListItem2 in listItem2
+							li
+								a(href='#')=columnListItem2
+			div.category-grid__column-list--compare
+				+tittle('SO SÁNH SẢN PHẨM', 'assets/image/titleleft-dark.png')
+				p Bạn chưa có sản phẩm nào để so sánh
+			div.category-grid__column-list--tag
+				+tittle('TAG SẢN PHẨM', 'assets/image/titleleft-dark.png')
+				each tagName in ['Đồng hồ', 'Túi', 'Phụ kiện', 'Giày', 'Áo sơ mi', 'Nước hoa']
+					a.tagname(href='#')=tagName
+			div.category-grid__column-list--image
+				img(src='assets/image/8bd367294fd54ff78565e6a73329e848.jpg' alt='small banner')
+		div.category-grid__product-show
+			div.category-grid__product-show--nav
+				div.category-grid__product-show--nav-view
+					i.active.fa.fa-th
+					i.fa.fa-list
+				div.category-grid__product-show--nav-pagination
+					- for (let i = 0; i < 5; i++) {
+						span(class=`${i + 1 === 2 ? 'active' : ''}`) #{i+1}
+					- }
+			div.category-grid__product-show--grid
+				- for (let i = 0; i < 12; i++) {
+					+productDetails('', 'assets/image/ASB0904_001.jpeg')
+				- }
