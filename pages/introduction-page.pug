@@ -1,0 +1,13 @@
+extend ../pages/layout
+block page
+	include ../pages/partials/header-info
+block unique content
+	+showNav('Trang chủ / ', '', 'Giỏ hàng')
+	div.intro
+		+tittle('GIỚI THIỆU', 'assets/image/titleleft-dark.png')
+		div.intro__content
+			div.intro__content--image
+				img(src='../assets/image/wine-63931_12802-1240x829.jpg')
+			div.intro__content--text
+				h2 CHÀO MỪNG ĐẾN VỚI WINE HOUSE
+				p I am crazy about hats these days. Some text about this blog entry. Fashion fashion and mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam corper. Praesent tincidunt sedtellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla. I am crazy about hats these days. Some text about this blog entry. Fashion fashion and mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat.

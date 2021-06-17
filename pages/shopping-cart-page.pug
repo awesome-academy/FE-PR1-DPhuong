@@ -1,0 +1,20 @@
+extend ../pages/layout
+block page
+	include ../pages/partials/header-info
+block unique content
+	+showNav('Trang chủ / ', 'Sản phẩm / ', 'Giỏ hàng')
+	div.cart
+		+tittle('GIỎ HÀNG', 'assets/image/titleleft-dark.png')
+		table
+			tr
+			- const item = ['ẢNH', 'TÊN SẢN PHẨM', 'GIÁ', 'SỐ LƯỢNG', 'TỔNG SỐ', 'XÓA']
+			each tableTh in item
+				th= tableTh
+			+tableRowTd
+			+tableRowTd
+			+tableRowTd
+			+tableRowTd
+		div.cart__button
+			+button('TIẾP TỤC MUA HÀNG')
+			+button('XÓA')
+			+button('CẬP NHẬT')

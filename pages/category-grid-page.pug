@@ -10,15 +10,13 @@ block unique content
 			div.category-grid__column-list--product-list
 				+tittle('DANH MỤC SẢN PHẨM', 'assets/image/titleleft-dark.png')
 				h4 RƯỢU NGOẠI
-					ul.product-list-import
-						- const listItem1 =  ['Rượu Chivas(67)', 'Hàng độc-Rượu độc đáo (16)', 'Johnnie Walker (49)', 'Rượu Wiskey (88)', 'Rượu Remy Martin (14)', 'Rượu Gerlemmoraing (27)','Rượu Chivas (85)', 'Hàng độc-Rượu độc đáo (17)', 'Johnnie Walker (19)', 'Rượu Wiskey (22)', 'Rượu Remy Martin (35)', 'Rượu Gerlemmoraing (18)', 'Rượu Chivas(67)', 'Hàng độc-Rượu độc đáo (16)', 'Johnnie Walker (49)', 'Rượu Wiskey (88)', 'Rượu Remy Martin (14)', 'Rượu Gerlemmoraing (27)','Rượu Chivas (85)', 'Hàng độc-Rượu độc đáo (17)','Rượu Gerlemmoraing (27)','Rượu Chivas (85)']
-						each columnListItem1 in listItem1
+					ul.product-list__import
+						each columnListItem1 in ['Rượu Chivas(67)', 'Hàng độc-Rượu độc đáo (16)', 'Johnnie Walker (49)', 'Rượu Wiskey (88)', 'Rượu Remy Martin (14)', 'Rượu Gerlemmoraing (27)','Rượu Chivas (85)', 'Hàng độc-Rượu độc đáo (17)', 'Johnnie Walker (19)', 'Rượu Wiskey (22)', 'Rượu Remy Martin (35)', 'Rượu Gerlemmoraing (18)', 'Rượu Chivas(67)', 'Hàng độc-Rượu độc đáo (16)', 'Johnnie Walker (49)', 'Rượu Wiskey (88)', 'Rượu Remy Martin (14)', 'Rượu Gerlemmoraing (27)','Rượu Chivas (85)', 'Hàng độc-Rượu độc đáo (17)','Rượu Gerlemmoraing (27)','Rượu Chivas (85)', ]
 							li
 								a(href='#')=columnListItem1
 				h4 RƯỢU VANG
-					ul.product-list-grape
-						- const listItem2 = ['Rượu Wiskey (88)', 'Rượu Remy Martin (14)', 'Rượu Gerlemmoraing (27)','Rượu Chivas (85)', 'Hàng độc-Rượu độc đáo (17)', 'Johnnie Walker (19)', 'Rượu Wiskey (22)', 'Rượu Remy Martin (35)', 'Rượu Gerlemmoraing (18)', 'Rượu Chivas(67)', 'Hàng độc-Rượu độc đáo (16)']
-						each columnListItem2 in listItem2
+					ul.product-list__grape
+						each columnListItem2 in ['Rượu Wiskey (88)', 'Rượu Remy Martin (14)', 'Rượu Gerlemmoraing (27)','Rượu Chivas (85)', 'Hàng độc-Rượu độc đáo (17)', 'Johnnie Walker (19)', 'Rượu Wiskey (22)', 'Rượu Remy Martin (35)', 'Rượu Gerlemmoraing (18)', 'Rượu Chivas(67)', 'Hàng độc-Rượu độc đáo (16)']
 							li
 								a(href='#')=columnListItem2
 			div.category-grid__column-list--compare
@@ -36,9 +34,11 @@ block unique content
 					i.active.fa.fa-th
 					i.fa.fa-list
 				div.category-grid__product-show--nav-pagination
-					- for (let i = 0; i < 5; i++) {
-						span(class=`${i + 1 === 2 ? 'active' : ''}`) #{i+1}
-					- }
+					- var values = [1,3,4,5]
+					each page in values
+						span= values
+					else
+						span.active=2
 			div.category-grid__product-show--grid
 				- for (let i = 0; i < 12; i++) {
 					+productDetails('', 'assets/image/ASB0904_001.jpeg')
