@@ -1,0 +1,16 @@
+extend ../pages/layout
+block page
+	include ../pages/partials/header-info
+block unique content
+	+showNav('Trang chủ / ', 'Sản phẩm / ', 'Rượu vang đỏ')
+	div.category-image
+		img(src='assets/image/slide-3.jpg' alt='banner')
+	div.category-detail
+		+columnList
+		div.category-detail__product-show
+			+productShowNav
+			div.category-detail__product-show--detail
+				+detailItem('assets/image/7.jpg')
+				+detailItem('assets/image/7.jpg')
+				+detailItem('assets/image/7.jpg')
+				+detailItem('assets/image/7.jpg')
