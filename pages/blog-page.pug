@@ -1,0 +1,12 @@
+extend ../pages/layout
+block page
+	include ../pages/partials/header-info
+block unique content
+	+showNav('Trang chủ / ', '', 'Giỏ hàng')
+	div.blog
+		+tittle('BLOG', 'assets/image/titleleft-dark.png')
+		div.blog__article-show
+			- for (let i = 0; i < 9; i++) {
+				+article('assets/image/Depositphotos_6971969_original-1240x698.jpg')
+			- }
+				

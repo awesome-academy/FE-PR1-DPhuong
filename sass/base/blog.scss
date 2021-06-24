@@ -1,0 +1,28 @@
+.detail-show__nav {
+	@include showNav;
+}
+
+.blog {
+	padding: 0 10%;
+	margin-bottom: 90px;
+
+	.main-intro__tittle {
+		margin-bottom: 30px;
+
+		h1 {
+			font-size: 23px;
+			padding-bottom: 2px;
+		}
+	}
+
+	.blog__article-show {
+		@include article;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-gap: 25px;
+
+		@include maxWidth(850px) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+}
