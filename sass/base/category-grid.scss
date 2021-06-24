@@ -17,7 +17,7 @@
 	margin-bottom: 90px;
 	@include flexDisplay(row);
 
-	.category-grid__column-list {
+	&__column-list {
 		flex: 25%;
 		max-width: 25%;
 		color: rgba($colorBlack, 0.7);
@@ -34,7 +34,7 @@
 				}
 			}
 
-			.product-list-import {
+			.product-list__import {
 				margin-bottom: 15px;
 
 				li {
@@ -81,7 +81,7 @@
 				}
 			}
 
-			.product-list-grape {
+			.product-list__grape {
 				li {
 					a {
 						text-decoration: none;
@@ -162,7 +162,7 @@
 		}
 	}
 
-	.category-grid__product-show {
+	&__product-show {
 		flex: 75%;
 		max-width: 75%;
 
@@ -175,7 +175,7 @@
 			margin-bottom: 30px;
 			@include clearFix;
 
-			&--nav-view {
+			&-view {
 				display: inline-block;
 				margin: 2px 0;
 
@@ -193,7 +193,7 @@
 				}
 			}
 
-			&--nav-pagination {
+			&-pagination {
 				display: inline-block;
 				float: right;
 				position: relative;
@@ -214,11 +214,21 @@
 				}
 
 				&:after {
-					@include virtualTriangle(transparent, rgba($colorBlack, 0.3), transparent, transparent, -17%)
+					content: '';
+					border: 6px solid;
+					border-color: transparent rgba($colorBlack, 0.3) transparent transparent ;
+					position: absolute;
+					top: 5px;
+					left: -17%;
 				}
 
 				&:before {
-					@include virtualTriangle(transparent, transparent, transparent, rgba($colorBlack, 0.3), 105%)
+					content: '';
+					border: 6px solid;
+					border-color: transparent transparent transparent rgba($colorBlack, 0.3);
+					position: absolute;
+					top: 5px;
+					left: 105%;
 				}
 			}
 		}
