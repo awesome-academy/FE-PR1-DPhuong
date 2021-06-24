@@ -45,7 +45,7 @@
 			top: 0;
 			left: 0;
 		}
-		&--tittle-container-2{
+		&--tittle-container-2 {
 			height: 0;
 			width: 0;
 			border-top: 49px solid white;
@@ -383,10 +383,10 @@
 	&:nth-child(3) {
 		.main-sales__product-image {
 			.main-sales__product-image {
-				.main-sales__product-image--tittle-container-1{
+				&--tittle-container-1{
 					border-top: 50px solid $colorRed;
 				}
-				.main-sales__product-image--tittle-container-3 {
+				&--tittle-container-3 {
 					border-top: 47px solid $colorRed;
 				}
 			}
