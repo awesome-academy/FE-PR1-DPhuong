@@ -1,0 +1,24 @@
+extend ../pages/layout
+block page
+	include ../pages/partials/header-info
+block unique content
+	+showNav('Trang chủ / ', '', 'Địa chỉ')
+	div.contact
+		+tittle('LIÊN HỆ', 'assets/image/titleleft-dark.png')
+		div.contact-location
+			div.map
+				iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3833.7154990273198!2d108.21780861433673!3d16.080246643414963!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3142183b8dc2697d%3A0xc105565d68b6ad90!2zMTYgTMO9IFRoxrDhu51uZyBLaeG7h3QsIFRo4bqhY2ggVGhhbmcsIEjhuqNpIENow6J1LCDEkMOgIE7hurVuZyA1NTAwMDAsIFZpZXRuYW0!5e0!3m2!1sen!2s!4v1624874277549!5m2!1sen!2s' width='600' height='450' style='border:0;' allowfullscreen='' loading='lazy')
+				form(action="/action_page.php")
+					+input('name', 'Your name', 'text', 'name', '', '')
+					+input('email', 'Your emial', 'email', 'email', '', '')
+					+input('subject', 'Your subject', 'text', 'subject', '', '')
+					div.key-in
+						label(for='message') Your message
+						textarea(id="message" name="message" rows="4")
+					+input('submit', '', 'submit', 'submit', 'Gửi', '')
+			div.info
+				img(src='assets/image/Screenshot_4.png' alt='logo')
+				+orderDetailInfo('fa-map-marker', 'Tầng 4, tòa nhà Hà Nội Group, 442 Đội Cấn, Ba Đình, Hà Nội', '')
+				+orderDetailInfo('fa-phone', '(04) 7352 73234', '')
+				+orderDetailInfo('fa-envelope', 'support@gmail.com', '')
+		
