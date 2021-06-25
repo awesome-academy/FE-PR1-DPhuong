@@ -1,0 +1,55 @@
+extend ../pages/layout
+block page
+	include ../pages/partials/header-info
+block unique content
+	+showNav('Trang chủ / ', '', 'Blog')
+	div.blog-detail
+		+tittle('BLOG', 'assets/image/titleleft-dark.png')
+		div.blog-content
+			div.blog-content__item
+				div.blog-content__item-news
+					h3 bài viết mới nhất
+					+newsBlogIntro('assets/image/VINSUAL04.jpg','cách sắp xếp nội thất trong nhà', '12/06/2015')
+					+newsBlogIntro('assets/image/VINSUAL04.jpg','cách sắp xếp nội thất trong nhà', '12/06/2015')
+					+newsBlogIntro('assets/image/VINSUAL04.jpg','cách sắp xếp nội thất trong nhà', '12/06/2015')
+				div.blog-content__item-tag
+					h3 blog tags
+					- const blogTag= ['Đồng hồ', 'Túi', 'Phụ kiện', 'Giày', 'Áo sơ mi', 'Nước hoa'];
+						each tagName in blogTag
+							a(href='#')=tagName
+				div.blog-content__item-video
+					h3 lasted video
+					video(controls)
+						source(src='assets/video/movie.mp4' type='video/mp4')
+			div.blog-content__article
+				div.blog-content__article-content
+					img(src='assets/image/Depositphotos_3010981_original1.jpg' alt='wine')
+					h2 vang thăng long classic
+					p.article-content__info
+						span Đăng bởi Giang Le
+						span 30/06/2015
+						span 60 bình luận
+					p.article-content__text I am crazy about hats these days. Some text about this blog entry. Fashion fashion and mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam corper. I am crazy about hats these days. Some text about this blog entry. Fashion fashion and mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam corper...
+				form(action="/action_page.php")
+					div.form-label
+						each label in ['Tên', 'Email', 'Ý kiến']
+							label(for="name")= label
+								span  *
+					div.form-input
+						input(type="text" name="name" required)
+						input(type="text" name="email" required)
+						textarea(name="comment" row='5' required)
+						input.submit(type="submit" value='GỞI Ý KIẾN')
+				div.blog-content__article-comment
+					h2 Bình luận (3)
+					div.article-comment__slide
+						+commentSlide('slide-1', 'item-1', 'Bình luận bởi Giangle 1')
+						+commentSlide('slide-2', 'item-2', 'Bình luận bởi Jane 22')
+						+commentSlide('slide-3', 'item-3', 'Bình luận bởi Abcxyz 333')
+						a(href='#')
+							i.fa.fa-angle-right
+						label.slide-3(for="slide-3") 3
+						label.slide-2(for="slide-2") 2
+						label.slide-1(for="slide-1") 1
+						a(href='#')
+							i.fa.fa-angle-left
