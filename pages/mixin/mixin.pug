@@ -139,3 +139,31 @@ mixin article(image)
 				span 60 bình luận
 			p.main-blogs__article-content--text-2 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel...
 				a(href='#') Read more
+
+mixin newsBlogIntro(image,text1, text2)
+	div.item-news__intro
+		div.item-news__intro-image
+			img(src!=image alt='blog')
+		div.item-news__intro-text
+			h4=text1
+			p 
+				i.fa.fa-calendar
+				span=text2
+
+mixin commentSlide(slideNumber, itemNumber, commentedByWhom)
+	input(type="radio" id!=slideNumber name="slide" checked)
+	div.slide-item(class!=itemNumber)
+		div.article-comment__slide-content
+			div.article-comment__slide-content--info
+				span= commentedByWhom
+				span Cách đây 4 giờ
+				a(href='#') Trả lời
+			div.article-comment__slide-content--text
+				p I am crazy about hats these days. Some text about this blog entry. Fashion fashion and mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam corper. I am crazy about hats these days.
+		div.article-comment__slide-content
+			div.article-comment__slide-content--info
+				span Bình luận bới Giangle
+				span Cách đây 4 giời
+				a(href='#') Trả lời
+			div.article-comment__slide-content--text
+				p I am crazy about hats these days. Some text about this blog entry. Fashion fashion and mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam corper. I am crazy about hats these days.
