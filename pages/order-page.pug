@@ -1,0 +1,37 @@
+extend ../pages/layout
+block page
+	include ../pages/partials/header-info
+block unique content
+	+showNav('Trang chủ / ', '', 'Danh sách đơn hàng')
+	div.order
+		+tittle('ĐƠN HÀNG', 'assets/image/titleleft-dark.png')
+		div.order-detail
+			table.order-detail__table
+				tr
+					td(colspan='7')
+						h4 Danh sách đơn hàng
+						-const stateValue = ['Trạng thái tất cả(16)', 'Đã hủy(10)', 'Chưa duyệt(0)', 'Đã duyệt(0)', 'Đã thanh toán - chờ mua hàng(0)', 'Đã mua hàng(0)', 'Hàng đã về - chờ giao hàng(0)', 'Đã kết thúc(6)']
+						each state in stateValue
+							span=state
+				tr
+					-const headValue = ['STT', 'MÃ HÓA ĐƠN/ NGÀY MUA HÀNG', 'KHO NHẬN HÀNG', 'SỐ SP', 'TỔNG TIỀN', 'TÌNH TRẠNG', 'THAO TÁC']
+					each head in headValue
+						th=head
+				- for (var i = 0; i < 6; ++i) {
+					tr
+						td=i
+						td LEANHGIANG89 - 17/06/2015
+							span 01:30 14/03/2015
+						td HÀ ĐÔNG
+						td 7
+						td 350.000 đ
+						td Đã thanh toán
+						td Chi tiết
+				- }
+			div.order-detail__info
+				div.order-detail__info-box
+					h4 Thông tin khách hành
+					+orderDetailInfo('fa-user', 'GIANGLE', 'leanhgiang89@gmail.com')
+					+orderDetailInfo('fa-map-marker', 'Tòa nhà Hà Nội group', '442 Đội Cấn, Ba Đình Hà Nội')
+					+orderDetailInfo('fa-phone', '(04) 8976 5432', '')
+					a(href='#') Chi tiết địa chỉ

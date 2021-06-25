@@ -1,0 +1,137 @@
+.detail-show__nav {
+	@include showNav;
+}
+
+.order {
+	padding: 0 10%;
+	margin-bottom: 90px;
+	position: relative;
+
+	.main-intro__tittle {
+		margin-bottom: 30px;
+
+		h1 {
+			font-size: 23px;
+			padding-bottom: 2px;
+		}
+	}
+
+	&-detail {
+		color: rgba($colorBlack, 0.7);
+		@include flexDisplay(row);
+		@include maxWidth(900px){
+			@include flexDisplay(column);
+			flex-direction: column-reverse;
+		}
+
+		 &__table {
+		 	border: 1px solid rgba($colorBlack, 0.2);
+		 	border-collapse: collapse;
+		 	flex: 75%;
+		 	max-width: 75%;
+		 	@include maxWidth(900px){
+				flex: 100%;
+		 		max-width: 100%;
+			}
+
+		 	tr {
+		 		color: rgba($colorBlack, 0.7);
+
+		 		&:not(:first-child) {
+		 			text-align: center;
+		 		}
+
+		 		&:first-child {
+		 			td {
+		 				background: rgba($colorBlack, 0.025);
+		 				padding: 25px 30px 15px 20px;
+
+		 				h4 {
+			 				text-transform: uppercase;
+			 				font-size: 15px;
+			 				margin-bottom: 20px;
+			 				padding-left: 10px;
+			 			}
+
+			 			span {
+			 				display: inline-block;
+			 				padding: 2px 10px;
+			 				margin-bottom: 7px;
+
+			 				&:not(:last-child) {
+			 					border-right: 1px solid rgba($colorBlack, 0.2);
+			 				}
+			 			}
+		 			}
+		 		}
+
+		 		th {
+		 			border: 1px solid rgba($colorBlack, 0.2);
+		 			font-size: 14px;
+		 			padding: 6px;
+		 			
+		 		}
+
+		 		td {
+		 			border-left: 1px solid rgba($colorBlack, 0.2);
+		 			font-size: 14px;
+		 			padding: 6px;
+
+
+		 			&:nth-child(2) {
+		 				span {
+		 					display: block;
+		 					text-align: left;
+		 					color: rgba($colorBlack, 0.4);
+		 					padding-left: 12%;
+		 					margin-top: 5px;
+		 				}
+		 			}
+		 		}
+		 	}
+		}
+
+		&__info {
+			flex: 25%;
+			max-width: 25%;
+			margin-left: 20px;
+			@include maxWidth(900px){
+				flex: 100%;
+		 		max-width: 100%;
+		 		margin-left: 0;
+		 		margin-bottom: 30px;
+			}
+
+			&-box {
+				border: 1px solid rgba($colorBlack, 0.2);
+				background: rgba($colorBlack, 0.025);
+				padding: 30px;
+
+			 	h4{
+			 		margin-bottom: 20px;
+			 		text-transform: uppercase;
+			 	}
+
+			 	p {
+					margin-bottom: 10px;
+
+					i {
+						margin-right: 7px;
+					}
+
+					span {
+						&:nth-child(3){
+							display: block;
+							margin-left: 8%;
+						}
+					}
+				}
+
+				a {
+					color: rgba($colorBlack, 0.7);
+				}
+			}
+			
+		}
+	}
+}
