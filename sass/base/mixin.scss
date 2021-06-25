@@ -833,3 +833,63 @@
 		}
 	}
 }
+
+@mixin form {
+	color: rgba($colorBlack, 0.7);
+	border: 1px solid rgba($colorBlack, 0.2);
+	padding: 35px;
+	@include clearFix;
+
+	h3 {
+		text-transform: uppercase;
+		margin-bottom: 10px;
+	}
+
+	p {
+		margin-bottom: 25px;
+	}
+
+	.form {
+		@include flexDisplay(row);
+
+		&-label {
+			flex: 10%;
+			max-width: 10%;
+
+			label {
+				display: block;
+				margin-bottom: 24px;
+			}
+		}
+
+		&-input {
+			flex: 90%;
+			max-width: 90%;
+
+			input {
+				display: block;
+				border: 1px solid rgba($colorBlack, 0.2);
+				width: 100%;
+				padding: 7px;
+				margin-bottom: 15px;
+			}
+
+			a {
+				display: block;
+				text-decoration: none;
+				margin-bottom: 15px;
+				color: rgba($colorBlack, 0.7);
+			}
+		}
+	}
+
+	.button {
+		button {
+			@include button;
+			position: static;
+			padding: 6px 15px;
+			display: inline-block;
+			font-size: 12px;					
+		}
+	}
+}
