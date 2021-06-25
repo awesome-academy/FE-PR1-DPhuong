@@ -1,0 +1,20 @@
+extend ../pages/layout
+block page
+	include ../pages/partials/header-info
+block unique content
+	+showNav('Trang chủ / ', '', 'Đăng nhập')
+	div.sign-in
+		+tittle('ĐĂNG NHẬP', 'assets/image/titleleft-dark.png')
+		+button('ĐĂNG KÝ')
+		form(action="/action_page.php")
+			h3 Khách hàng đăng nhập
+			p Nếu bạn có một tài khoản xin vui lòng đăng nhập
+			div.form
+				div.form-label
+					label(for='email') Email *
+					label(for='password') Password *
+				div.form-input
+					input(type='text' name="email" required) 
+					input(type="password" id="pwd" name="pwd" required)
+					a(href='#') *  Quên mật khẩu
+					+button('ĐĂNG NHẬP')
