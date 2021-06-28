@@ -167,3 +167,9 @@ mixin commentSlide(slideNumber, itemNumber, commentedByWhom)
 				a(href='#') Trả lời
 			div.article-comment__slide-content--text
 				p I am crazy about hats these days. Some text about this blog entry. Fashion fashion and mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam corper. I am crazy about hats these days.
+
+mixin orderDetailInfo(icon, text1, text2)
+	p
+		i.fa(class!=icon)
+		span=text1
+		span=text2
