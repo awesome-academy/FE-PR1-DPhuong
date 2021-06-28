@@ -1,0 +1,40 @@
+.detail-show__nav {
+	@include showNav;
+}
+
+.sign-up {
+	padding: 0 10%;
+	margin-bottom: 90px;
+	position: relative;
+
+	.main-intro__tittle {
+		margin-bottom: 30px;
+
+		h1 {
+			font-size: 23px;
+			padding-bottom: 2px;
+		}
+	}
+
+	button {
+		@include button;
+		position: absolute;
+		right: 10%;
+		top: 0;	
+		padding: 9px 30px;	
+	}
+
+	form {
+		@include form;
+
+		.form {
+			&:nth-child(2) {
+				margin-bottom: 30px;
+			}
+		}
+
+		.button {
+			float: right;
+		}
+	}
+}

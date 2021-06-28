@@ -1,0 +1,33 @@
+extend ../pages/layout
+block page
+	include ../pages/partials/header-info
+block unique content
+	+showNav('Trang chủ / ', '', 'Đăng nhập')
+	div.sign-up
+		+tittle('ĐĂNG KÝ', 'assets/image/titleleft-dark.png')
+		+button('ĐĂNG KÝ')
+		form(action="/action_page.php")
+			h3 Thông tin cá nhân
+			div.form
+				div.form-label
+					label(for='fname') Tên trước *
+					label(for='lname') Tên sau *
+					label(for='email') Email *
+					label(for='pwd') Password *
+				div.form-input
+					input(type='text' id='fname' name="fname" required)
+					input(type='text' id='lname' name="lname" required)
+					input(type='email' id='email' name="email" required) 
+					input(type="password" id="pwd" name="pwd" required)
+					a(href='#') *  Đăng ký nhận bản tin
+			h3 Thông tin đăng nhập
+			div.form
+				div.form-label
+					label(for='pwdInput') Mật khẩu *
+					label(for='pwdConfirm') Xác nhận mật khẩu *
+				div.form-input 
+					input(type="password" id="pwdInput" name="pwd" required)
+					input(type="password" id="pwdConfirm" name="pwd" required)
+			div.button
+				+button('GỬI')
+				+button('QUAY LẠI')
