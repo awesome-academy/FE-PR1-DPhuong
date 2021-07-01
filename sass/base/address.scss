@@ -1,0 +1,159 @@
+.detail-show__nav {
+	@include showNav;
+}
+
+.address {
+	padding: 0 10%;
+	margin-bottom: 90px;
+	position: relative;
+
+	.main-intro__tittle {
+		margin-bottom: 30px;
+
+		h1 {
+			font-size: 23px;
+			padding-bottom: 2px;
+		}
+	}
+
+	&-form {
+		margin-bottom: 25px;
+		@include flexDisplay(row);
+		@include maxWidth(900px) {
+			@include flexDisplay(column);
+		}
+
+		&__content {
+			color: rgba($colorBlack, 0.8);
+			flex: 50%;
+			max-width: 50%;
+			@include maxWidth(900px) {
+				flex: 100%;
+				max-width: 100%;
+				margin: 0;
+			}
+
+			&:first-child {
+				margin-right: 15px;
+			}
+
+			&:last-child {
+				margin-left: 15px;
+			}
+
+			h3 {
+				text-transform: uppercase;
+			}
+
+			a {
+				color: $colorBlue;
+				font-size: 17px;
+			}
+
+			form {
+				margin-top: 30px;
+
+				.key-in {
+					margin-bottom: 15px;
+					@include flexDisplay(row);
+
+					label {
+						flex: 20%;
+						max-width: 20%;
+						display: block;
+					}
+
+					input, select {
+						flex: 80%;
+						max-width: 80%;
+						width: 100%;
+						display: block;
+						border: 1px solid rgba($colorBlack, 0.2);
+						padding: 7px;
+					}
+
+					&:nth-child(9) {
+						flex-direction: row-reverse;
+						margin-left: 20%;
+
+						input[type='checkbox'] {
+							flex: 5%;
+							max-width: 5%;
+							width: auto;
+							background: rgba($colorBlack, 0.2);
+							margin-top: 4px;
+						}
+
+						label {
+							flex: 95%;
+							max-width: 95%;
+							margin-left: 10px;
+						}
+					}
+
+					&:nth-child(10) {
+						display: inline-block;
+						margin-left: 20%;
+						margin-right: -25px;
+
+						input[type='submit'] {
+							width: 200px;
+							background: $colorBlue;
+							color: white;
+						}
+					}
+
+					&:nth-child(11) {
+						display: inline-block;
+
+						input[type='reset'] {
+							width: 70px;
+							color: white;
+							background: black;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&-import {
+		border-top: 1px solid rgba($colorBlack, 0.2);
+		padding: 35px 0;
+		width: 50%;
+		@include clearFix;
+		@include maxWidth(900px) {
+			width: 100%;
+		}
+
+		.address-info {
+			@include flexDisplay(row);
+
+
+			&__label {
+				flex: 20%;
+				max-width: 20%;
+
+				p {
+					margin-bottom: 25px;
+				}
+			}
+
+			&__input {
+				flex: 80%;
+				max-width: 80%;
+
+				p {
+					margin-bottom: 25px;
+					margin-left: 5px;
+				}
+			}
+		}
+
+		a {
+			color: $colorBlue;
+			font-size: 17px;
+			float: right;
+		}
+	}
+}

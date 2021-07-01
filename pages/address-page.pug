@@ -1,0 +1,40 @@
+extend ../pages/layout
+block page
+	include ../pages/partials/header-info
+block unique content
+	+showNav('Trang chủ / ', '', 'Địa chỉ')
+	div.address
+		+tittle('ĐỊA CHỈ', 'assets/image/titleleft-dark.png')
+		div.address-form
+			div.address-form__content
+				h3 ĐỊA CHỈ CỦA BẠN
+				form
+					+input('fname', 'Tên', 'text', 'fname', 'Giang', '')
+					+input('lname', 'Họ & tên đệm', 'text', 'lname', 'Le Anh', '')
+					+input('company', 'Công ty', 'text', 'company', 'Công ty cổ phần Công nghệ DKT', '')
+					+input('address', 'Địa chỉ', 'text', 'address', 'Tòa nhà Hà Nội Group, 442 Đội Cấn, Ba Đình, Hà Nội', '')
+					+input('city', 'Thành phố', 'text', 'city', 'Hà Nội', '')
+					+input('nationality', 'Quốc tịch', 'text', 'nationality', 'Việt Nam', '')
+					+input('postal', 'Thành phố', 'text', 'postal', '08257383', '')
+					+input('phone', 'Điện Thoại', 'text', 'phone', '0905 17312', '')
+					+input('default', 'Đặt làm địa chỉ mặc định?', 'checkbox', 'default', 'default address', 'checked')
+					+input('', '', 'submit', '', 'Chỉnh sửa địa chỉ', '')
+					+input('', '', 'reset', '', 'Xóa', '')
+			div.address-form__content
+				a(href='#') Thêm địa chỉ
+				form
+					+input('fname', 'Tên', 'text', 'fname', 'Giang', '')
+					+input('lname', 'Họ & tên đệm', 'text', 'lname', 'Le Anh', '')
+					+input('company', 'Công ty', 'text', 'company', 'Công ty cổ phần Công nghệ DKT', '')
+					+input('address', 'Địa chỉ', 'text', 'address', 'Tòa nhà Hà Nội Group, 442 Đội Cấn, Ba Đình, Hà Nội', '')
+					+select('cityList', 'Thành phố','city', 'Hà Nội', 'Huế', 'Đà Nẵng', 'Sài Gòn')
+					+select('nationalityList','Quốc tịch', 'nationality', 'Việt Nam', 'Lào', 'Campuchia', 'Ả Rập')
+					+input('postal', 'Thành phố', 'text', 'postal', '08257383', '')
+					+input('phone', 'Điện Thoại', 'text', 'phone', '0905 17312', '')
+					+input('default', 'Đặt làm địa chỉ mặc định?', 'checkbox', 'default', 'default address', 'checked')
+						label(for='default') 
+					+input('', '', 'submit', '', 'Cập nhật địa chỉ', '')
+					+input('', '', 'reset', '', 'Thoát', '')
+
+		+addressImport
+		+addressImport

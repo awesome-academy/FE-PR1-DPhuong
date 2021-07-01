@@ -173,3 +173,29 @@ mixin orderDetailInfo(icon, text1, text2)
 		i.fa(class!=icon)
 		span=text1
 		span=text2
+
+mixin addressImport
+	div.address-import
+		div.address-info
+			div.address-info__label
+				-const infoLabelValue = ['Tên', 'Họ & tên đệm', 'Công ty', 'Địa chỉ', 'Thành phố', 'Quốc tịch', 'Postal/ Zip code', 'Điện thoại']
+				each infoLabel in infoLabelValue
+					p=infoLabel
+			div.address-info__input
+				-const infoInputValue = ['Giang', 'Le Anh', 'Công ty cổ phần Công nghệ DKT', 'Tòa nhà Hà Nội Group, 442 Đội Cấn, Ba Đình, Hà Nội', 'Hà Nội', 'Việt Nam', '08257383', '0905 17312']
+				each infoInput in infoInputValue
+					p=infoInput
+		a(href='#') Chỉnh sửa địa chỉ
+
+mixin input(forLabel, label, type, name, value, check)
+	div.key-in
+		label(for!=forLabel)=label
+		input(type!=type id!=forLabel name!=name value!=value checked!=check)
+mixin select(citySelect, label, city, cityName1, cityName2, cityName3, cityName4)
+	div.key-in
+		label(for!=citySelect)=label
+		select(id!=citySelect name!=city)
+			option(value!=cityName1)=cityName1
+			option(value!=cityName2)=cityName2
+			option(value!=cityName3)=cityName3
+			option(value!=cityName4)=cityName4
