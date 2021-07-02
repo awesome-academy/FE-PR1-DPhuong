@@ -1,0 +1,21 @@
+extend ../pages/layout
+block unique content
+	div.fail
+		h1 404
+		div.fail-content
+			div.fail-content__image
+				img(src='assets/image/5.jpg')
+			div.fail-content__text
+				h2 Lỗi
+				p
+					span Đây không phải là
+					span trang web bạn đang tìm kiếm
+	div.right
+		img(src='assets/image/Screenshot_6.png' alt='logo')
+		span
+			a(href='#') Trang chủ
+			i.fa.fa-caret-right
+		span
+			a(href='#') Liên hệ
+			i.fa.fa-caret-right
+		input(type='text' id='search' name='search')
