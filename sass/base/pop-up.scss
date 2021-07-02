@@ -1,0 +1,74 @@
+.pop-up {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	background: rgba($colorBlack, 0.6);
+	@include flexCenter;
+
+	&__box {
+		color: rgba($colorBlack, 0.8);
+		background: white;
+		padding: 40px;
+		width: 50%;
+		@include flexDisplay(row);
+
+		.image {
+			flex: 40%;
+			max-width: 40%;
+
+			img {
+				width: 100%;
+				height: 200px;
+				object-fit: cover;
+			}
+		}
+
+		.content {
+			flex: 60%;
+			max-width: 60%;
+			margin-left: 20px;
+			text-align: center;
+
+			h1 {
+				text-transform: uppercase;
+				margin-bottom: 15px;
+			}
+
+			p {
+				margin-bottom: 15px;
+			}
+
+			input[type='email'] {
+				padding: 7px 16px 7px 17px;
+				border: 1px solid rgba($colorBlack, 0.2);
+				margin-bottom: 15px;
+			}
+
+			input[type='submit'] {
+				padding: 7px 10px;
+				background: $colorYelow;
+				color: white;
+				border: 1px solid $colorYelow;
+				transform: translateX(-4px);
+				font-size: 13px;
+				margin-bottom: 15px;
+
+				&:hover {
+					background: black;
+					border: 1px solid black;
+				}
+			}
+
+			div {
+				input[type='checkbox'] {
+					border: 1px solid rgba($colorBlack, 0.2);
+					transform: translateY(1px);
+					margin-right: 5px;
+				}
+			}
+		}
+	}
+}

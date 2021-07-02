@@ -1,0 +1,18 @@
+extend ../pages/layout
+block page
+	include ../pages/partials/header-info-homepage
+	include ../pages/partials/header
+block unique content
+	include ../pages/partials/main
+	div.pop-up
+		div.pop-up__box
+			div.image
+				img(src='assets/image/5.jpg')
+			div.content
+				h1 Gửi email
+				p Đăng ký ngay hôm nay để nhận thông tin sự kiện và các chương trình giảm giá của tôi trong sớm nhất.
+				input(type='email' id='email' name='email' placeholder='Email của bạn...')
+				input(type='submit' id='submit' value='GỬI EMAIL')
+				div
+					input(type='checkbox' id='display' name='display')
+					label(for='display') Không hiện thị lại thông báo này
