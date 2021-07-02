@@ -1,0 +1,319 @@
+
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <script src="js/all.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA7-ht9HI1-6uL2zI8D6GZYc98lZ2MVbeQ&amp;callback=initMap&amp;libraries=&amp;v=weekly" async="async"></script>
+  </head>
+  <body>
+    <!-- header-info on large screen-->
+    <ul class="header-info__large">
+      <li class="header-info__item"><span class="header-info__item--mark">-</span><a href="#">Tài khoản của tôi</a></li>
+      <li class="header-info__item"><span class="header-info__item--mark">-</span><a href="#">Trạng thái khách hàng</a></li>
+      <li class="header-info__item"><span class="header-info__item--mark">-</span><a href="#">Danh mục ưa thích</a></li>
+      <li class="header-info__item"><span class="header-info__item--mark">-</span><a href="#">Giỏ hàng</a></li>
+      <li class="header-info__item"><span class="header-info__item--mark">-</span><a href="#">Đăng nhập</a></li>
+      <li class="header-info__item"><span class="header-info__item--mark">-</span><a href="#">Đăng ký</a></li>
+      <li class="header-info__item header-info__search">
+        <input type="text" placeholder="Tìm kiếm tại đây..."/><a href="#"><i class="fa fa-search"></i></a>
+      </li>
+    </ul>
+    <!-- header-info on small screen-->
+    <ul class="header-info__small">
+      <li class="header-info__item header-info__dropdown"> <span>Thông tin cá nhân</span><i class="fa fa-angle-down"></i>
+        <ul class="header-info__dropdown-content">
+          <li class="header-info__dropdown-content--item"><span class="header-info__item--mark">-</span><a href="#">Tài khoản của tôi</a></li>
+          <li class="header-info__dropdown-content--item"><span class="header-info__item--mark">-</span><a href="#">Trạng thái khách hàng</a></li>
+          <li class="header-info__dropdown-content--item"><span class="header-info__item--mark">-</span><a href="#">Danh mục ưa thích</a></li>
+          <li class="header-info__dropdown-content--item"><span class="header-info__item--mark">-</span><a href="#">Giỏ hàng</a></li>
+          <li class="header-info__dropdown-content--item"><span class="header-info__item--mark">-</span><a href="#">Đăng nhập</a></li>
+          <li class="header-info__dropdown-content--item"><span class="header-info__item--mark">-</span><a href="#">Đăng ký</a></li>
+        </ul>
+      </li>
+      <li class="header-info__item header-info__search">
+        <input type="text" placeholder="Tìm kiếm tại đây..."/><a href="#"><i class="fa fa-search"></i></a>
+      </li>
+    </ul>
+    <!-- Navigation bar-->
+    <!-- Navigation bar large-->
+    <ul class="nav-bar-large">
+      <li class="nav-bar__item nav-bar__item--logo"><img src="assets/image/logo.png" alt="logo"/></li>
+      <li class="nav-bar__item"><a href="#">Trang chủ</a></li>
+      <li class="nav-bar__item"><a href="#">Rượu Vang đỏ</a>
+        <ul class="nav-bar__item-dropdown-content">
+          <li class="nav-bar__item-dropdown-content--column">
+            <h4>RƯỢU NGOẠI</h4>
+            <ul class="nav-bar__item-dropdown-content--column-list">
+              <li><a href="#">Rượu Chivas</a></li>
+              <li><a href="#">Hàng độc-Rượu độc đáo</a></li>
+              <li><a href="#">Johnnie Walker</a></li>
+              <li><a href="#">Rượu Wiskey</a></li>
+              <li><a href="#">Rượu Remy Martin</a></li>
+              <li><a href="#">Rượu Gerlemmoraing</a></li>
+            </ul>
+          </li>
+          <li class="nav-bar__item-dropdown-content--column">
+            <h4>RƯỢU VANG</h4>
+            <ul class="nav-bar__item-dropdown-content--column-list">
+              <li><a href="#">Rượu Chivas</a></li>
+              <li><a href="#">Hàng độc-Rượu độc đáo</a></li>
+              <li><a href="#">Johnnie Walker</a></li>
+              <li><a href="#">Rượu Wiskey</a></li>
+              <li><a href="#">Rượu Remy Martin</a></li>
+              <li><a href="#">Rượu Gerlemmoraing</a></li>
+            </ul>
+          </li>
+          <li class="nav-bar__item-dropdown-content--column">
+            <h4>RƯỢU NGOẠI</h4>
+            <ul class="nav-bar__item-dropdown-content--column-list">
+              <li><a href="#">Rượu Chivas</a></li>
+              <li><a href="#">Hàng độc-Rượu độc đáo</a></li>
+              <li><a href="#">Johnnie Walker</a></li>
+              <li><a href="#">Rượu Wiskey</a></li>
+              <li><a href="#">Rượu Remy Martin</a></li>
+              <li><a href="#">Rượu Gerlemmoraing</a></li>
+            </ul>
+          </li>
+          <li class="nav-bar__item-dropdown-content--column nav-bar__item-dropdown-content--column-image"><img src="assets/image/12.jpg" alt="wine"/></li>
+        </ul>
+      </li>
+      <li class="nav-bar__item"><a href="#">Rượu trắng</a></li>
+      <li class="nav-bar__item"><a href="#">Champagne</a></li>
+      <li class="nav-bar__item"><a href="#">Thông tin</a></li>
+      <li class="nav-bar__item"><a href="#">Blog</a></li>
+      <li class="nav-bar__item"><a href="#">Liên hệ</a></li>
+    </ul>
+    <!-- Navigation bar small-->
+    <ul class="nav-bar-small">
+      <li class="nav-bar__item--logo"><img src="assets/image/logo.png" alt="logo"/></li>
+      <li class="nav-bar__item--dropdown"><i class="fa fa-bars"></i>
+        <ul class="nav-bar__item--dropdown-content">
+          <li class="nav-bar__item"><a href="#">Trang chủ</a></li>
+          <li class="nav-bar__item"><a href="#">Rượu Vang đỏ
+              <ul class="nav-bar-small__item-dropdown-content">
+                <li class="nav-bar__item-dropdown-content--column">
+                  <h4>RƯỢU NGOẠI</h4>
+                  <ul class="nav-bar__item-dropdown-content--column-list">
+                    <li><a href="#">Rượu Chivas</a></li>
+                    <li><a href="#">Hàng độc-Rượu độc đáo</a></li>
+                    <li><a href="#">Johnnie Walker</a></li>
+                    <li><a href="#">Rượu Wiskey</a></li>
+                    <li><a href="#">Rượu Remy Martin</a></li>
+                    <li><a href="#">Rượu Gerlemmoraing</a></li>
+                  </ul>
+                </li>
+                <li class="nav-bar__item-dropdown-content--column">
+                  <h4>RƯỢU VANG</h4>
+                  <ul class="nav-bar__item-dropdown-content--column-list">
+                    <li><a href="#">Rượu Chivas</a></li>
+                    <li><a href="#">Hàng độc-Rượu độc đáo</a></li>
+                    <li><a href="#">Johnnie Walker</a></li>
+                    <li><a href="#">Rượu Wiskey</a></li>
+                    <li><a href="#">Rượu Remy Martin</a></li>
+                    <li><a href="#">Rượu Gerlemmoraing</a></li>
+                  </ul>
+                </li>
+                <li class="nav-bar__item-dropdown-content--column">
+                  <h4>RƯỢU NGOẠI</h4>
+                  <ul class="nav-bar__item-dropdown-content--column-list">
+                    <li><a href="#">Rượu Chivas</a></li>
+                    <li><a href="#">Hàng độc-Rượu độc đáo</a></li>
+                    <li><a href="#">Johnnie Walker</a></li>
+                    <li><a href="#">Rượu Wiskey</a></li>
+                    <li><a href="#">Rượu Remy Martin</a></li>
+                    <li><a href="#">Rượu Gerlemmoraing</a></li>
+                  </ul>
+                </li>
+                <li class="nav-bar__item-dropdown-content--column nav-bar__item-dropdown-content--column-image"><img src="assets/image/12.jpg" alt="wine"/></li>
+              </ul></a></li>
+          <li class="nav-bar__item"><a href="#">Rượu trắng</a></li>
+          <li class="nav-bar__item"><a href="#">Champagne</a></li>
+          <li class="nav-bar__item"><a href="#">Thông tin</a></li>
+          <li class="nav-bar__item"><a href="#">Blog</a></li>
+          <li class="nav-bar__item"><a href="#">Liên hệ</a></li>
+        </ul>
+      </li>
+    </ul>
+    <p class="detail-show__nav"><a href="#">Trang chủ / </a><a href="#"></a><a class="active" href="#">Blog</a></p>
+    <div class="blog-detail">
+      <div class="main-intro__tittle">
+        <h1>BLOG</h1><img src="assets/image/titleleft-dark.png" alt="tittle mark"/>
+      </div>
+      <div class="blog-content">
+        <div class="blog-content__item">
+          <div class="blog-content__item-news">
+            <h3>bài viết mới nhất</h3>
+            <div class="item-news__intro">
+              <div class="item-news__intro-image"><img src="assets/image/VINSUAL04.jpg" alt="blog"/></div>
+              <div class="item-news__intro-text">
+                <h4>cách sắp xếp nội thất trong nhà</h4>
+                <p> <i class="fa fa-calendar"></i><span>12/06/2015</span></p>
+              </div>
+            </div>
+            <div class="item-news__intro">
+              <div class="item-news__intro-image"><img src="assets/image/VINSUAL04.jpg" alt="blog"/></div>
+              <div class="item-news__intro-text">
+                <h4>cách sắp xếp nội thất trong nhà</h4>
+                <p> <i class="fa fa-calendar"></i><span>12/06/2015</span></p>
+              </div>
+            </div>
+            <div class="item-news__intro">
+              <div class="item-news__intro-image"><img src="assets/image/VINSUAL04.jpg" alt="blog"/></div>
+              <div class="item-news__intro-text">
+                <h4>cách sắp xếp nội thất trong nhà</h4>
+                <p> <i class="fa fa-calendar"></i><span>12/06/2015</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="blog-content__item-tag">
+            <h3>blog tags</h3><a href="#">Đồng hồ</a><a href="#">Túi</a><a href="#">Phụ kiện</a><a href="#">Giày</a><a href="#">Áo sơ mi</a><a href="#">Nước hoa</a>
+          </div>
+          <div class="blog-content__item-video">
+            <h3>lasted video</h3>
+            <video controls="controls">
+              <source src="assets/video/movie.mp4" type="video/mp4"/>
+            </video>
+          </div>
+        </div>
+        <div class="blog-content__article">
+          <div class="blog-content__article-content"><img src="assets/image/Depositphotos_3010981_original1.jpg" alt="wine"/>
+            <h2>vang thăng long classic</h2>
+            <p class="article-content__info"><span>Đăng bởi Giang Le</span><span>30/06/2015</span><span>60 bình luận</span></p>
+            <p class="article-content__text">I am crazy about hats these days. Some text about this blog entry. Fashion fashion and mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam corper. I am crazy about hats these days. Some text about this blog entry. Fashion fashion and mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam corper...</p>
+          </div>
+          <form action="/action_page.php">
+            <div class="form-label">
+              <label for="name">Tên<span> *</span></label>
+              <label for="name">Email<span> *</span></label>
+              <label for="name">Ý kiến<span> *</span></label>
+            </div>
+            <div class="form-input">
+              <input type="text" name="name" required="required"/>
+              <input type="text" name="email" required="required"/>
+              <textarea name="comment" row="5" required="required"></textarea>
+              <input class="submit" type="submit" value="GỞI Ý KIẾN"/>
+            </div>
+          </form>
+          <div class="blog-content__article-comment">
+            <h2>Bình luận (3)</h2>
+            <div class="article-comment__slide">
+              <input type="radio" id="slide-1" name="slide" checked="checked"/>
+              <div class="slide-item item-1">
+                <div class="article-comment__slide-content">
+                  <div class="article-comment__slide-content--info"><span>Bình luận bởi Giangle 1</span><span>Cách đây 4 giờ</span><a href="#">Trả lời</a></div>
+                  <div class="article-comment__slide-content--text">
+                    <p>I am crazy about hats these days. Some text about this blog entry. Fashion fashion and mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam corper. I am crazy about hats these days.</p>
+                  </div>
+                </div>
+                <div class="article-comment__slide-content">
+                  <div class="article-comment__slide-content--info"><span>Bình luận bới Giangle</span><span>Cách đây 4 giời</span><a href="#">Trả lời</a></div>
+                  <div class="article-comment__slide-content--text">
+                    <p>I am crazy about hats these days. Some text about this blog entry. Fashion fashion and mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam corper. I am crazy about hats these days.</p>
+                  </div>
+                </div>
+              </div>
+              <input type="radio" id="slide-2" name="slide" checked="checked"/>
+              <div class="slide-item item-2">
+                <div class="article-comment__slide-content">
+                  <div class="article-comment__slide-content--info"><span>Bình luận bởi Jane 22</span><span>Cách đây 4 giờ</span><a href="#">Trả lời</a></div>
+                  <div class="article-comment__slide-content--text">
+                    <p>I am crazy about hats these days. Some text about this blog entry. Fashion fashion and mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam corper. I am crazy about hats these days.</p>
+                  </div>
+                </div>
+                <div class="article-comment__slide-content">
+                  <div class="article-comment__slide-content--info"><span>Bình luận bới Giangle</span><span>Cách đây 4 giời</span><a href="#">Trả lời</a></div>
+                  <div class="article-comment__slide-content--text">
+                    <p>I am crazy about hats these days. Some text about this blog entry. Fashion fashion and mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam corper. I am crazy about hats these days.</p>
+                  </div>
+                </div>
+              </div>
+              <input type="radio" id="slide-3" name="slide" checked="checked"/>
+              <div class="slide-item item-3">
+                <div class="article-comment__slide-content">
+                  <div class="article-comment__slide-content--info"><span>Bình luận bởi Abcxyz 333</span><span>Cách đây 4 giờ</span><a href="#">Trả lời</a></div>
+                  <div class="article-comment__slide-content--text">
+                    <p>I am crazy about hats these days. Some text about this blog entry. Fashion fashion and mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam corper. I am crazy about hats these days.</p>
+                  </div>
+                </div>
+                <div class="article-comment__slide-content">
+                  <div class="article-comment__slide-content--info"><span>Bình luận bới Giangle</span><span>Cách đây 4 giời</span><a href="#">Trả lời</a></div>
+                  <div class="article-comment__slide-content--text">
+                    <p>I am crazy about hats these days. Some text about this blog entry. Fashion fashion and mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam corper. I am crazy about hats these days.</p>
+                  </div>
+                </div>
+              </div><a href="#"><i class="fa fa-angle-right"></i></a>
+              <label class="slide-3" for="slide-3">3</label>
+              <label class="slide-2" for="slide-2">2</label>
+              <label class="slide-1" for="slide-1">1</label><a href="#"><i class="fa fa-angle-left"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer> 
+      <div class="footer__brand-show">
+        <div class="footer__brand-logo"><img src="assets/image/1.png"/></div>
+        <div class="footer__brand-logo"><img src="assets/image/2.png"/></div>
+        <div class="footer__brand-logo"><img src="assets/image/3.png"/></div>
+      </div>
+      <div class="footer__content">
+        <div class="footer__content--info">
+          <h4>THÔNG TIN</h4>
+          <ul class="footer__content--info-list">
+            <li class="footer__content--info-list-item"> <a href="#">VỀ CHUNG TÔI</a></li>
+            <li class="footer__content--info-list-item"> <a href="#">GIAO HÀNG</a></li>
+            <li class="footer__content--info-list-item"> <a href="#">CAM KẾT</a></li>
+            <li class="footer__content--info-list-item"> <a href="#">LƯU TRỮ</a></li>
+            <li class="footer__content--info-list-item"> <a href="#">CHÍNH SÁCH RIÊNG TƯ</a></li>
+          </ul>
+        </div>
+        <div class="footer__content--order">
+          <h4>MUA HÀNG</h4>
+          <ul class="footer__content--info-list">
+            <li class="footer__content--info-list-item"> <a href="#">VẬN CHUYỂN TRẢ HÀNG</a></li>
+            <li class="footer__content--info-list-item"> <a href="#">MUA HÀNG AN TOÀN</a></li>
+            <li class="footer__content--info-list-item"> <a href="#">VẬN CHUYỂN QUỐC TẾ</a></li>
+            <li class="footer__content--info-list-item"> <a href="#">LIÊN KẾT</a></li>
+            <li class="footer__content--info-list-item"> <a href="#">DỊCH VỤ GIẢM GIÁ</a></li>
+          </ul>
+        </div>
+        <div class="footer__content--email">
+          <h4>GỞI EMAIL</h4>
+          <P>Gởi email cho chúng tôi để được hổ trợ</P>
+          <div class="footer__content--email-input">
+            <input type="text" placeholder="Enter your email"/>
+            <div class="footer__content--email-input-send">
+              <button>Gửi</button>
+              <div class="triangle"></div>
+            </div>
+          </div>
+          <ul class="footer__content--email-social">
+            <li class="footer__content--email-social-icon"><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li class="footer__content--email-social-icon"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+            <li class="footer__content--email-social-icon"><a href="#"><i class="fa fa-facebook-official"></i></a></li>
+            <li class="footer__content--email-social-icon"><a href="#"><i class="fa fa-flickr"></i></a></li>
+            <li class="footer__content--email-social-icon"><a href="#"><i class="fa fa-instagram"></i></a></li>
+          </ul>
+        </div>
+        <div class="footer__content--contact">
+          <h4>LIÊN HỆ</h4>
+          <p><i class="fa fa-map-marker"></i><span>Tầng 4, tòa nhà Hanoi Group, số 442 Đội Cấn, Ba đình, Hà Nội</span></p>
+          <p><i class="fa fa-phone"></i><span>(04) 6789 1234</span></p>
+          <p><i class="fa fa-phone"></i><span>(04) 6789 1234</span></p>
+          <p><i class="fa fa-phone"></i><span>(08) 6789 12345</span></p>
+          <p><i class="fa fa-envelope"></i><span>support@gmail.com</span></p>
+        </div>
+      </div>
+      <div class="footer__bar">
+        <div class="footer__bar-copyright">
+          <p>&#169; 2014-2019 DKT Technology JSC</p>
+        </div>
+        <div class="footer__bar-payment"><i class="fa fa-cc-visa"></i><i class="fa fa-paypal"></i><i class="fa fa-cc-mastercard"></i><i class="fa fa-cc-paypal"></i></div>
+      </div>
+    </footer>
+  </body>
+</html>
